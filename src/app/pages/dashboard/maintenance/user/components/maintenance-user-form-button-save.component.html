@@ -1,0 +1,51 @@
+<div class="form-group text-right" [formGroup]="form">
+  <!-- Botón para registrar -->
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="registerUser()"
+    [disabled]="(form.invalid)"
+    *ngIf="(form.value.typeAction === operation.register)"
+  >
+    <i class="fa fa-user-plus" aria-hidden="true"></i>
+    Register
+  </button>
+  <!-- /Botón para registrar -->
+  &zwj;
+  <!-- Botón para resetear -->
+  <button
+    type="button"
+    class="btn btn-light"
+    (click)="resetForm()"
+    *ngIf="(form.value.typeAction === operation.register)"
+  >
+    <i class="fa fa-eraser" aria-hidden="true"></i>
+    Reset
+  </button>
+  <!-- /Botón para resetear -->
+
+  <!-- Botón para actualizar -->
+  <button
+    type="button"
+    class="btn btn-success"
+    (click)="updateUser()"
+    [disabled]="(form.invalid)"
+    *ngIf="(form.value.typeAction === operation.update)"
+  >
+    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+    Update
+  </button>
+  <!-- /Botón para actualizar -->
+  &zwj;
+  <!-- Botón para cancelar -->
+  <button
+    type="button"
+    class="btn btn-secondary"
+    (click)="cancelUpdate()"
+    *ngIf="(form.value.typeAction === operation.update)"
+  >
+    <i class="fa fa-ban" aria-hidden="true"></i>
+    Cancel
+  </button>
+  <!-- /Botón para cancelar -->
+</div>

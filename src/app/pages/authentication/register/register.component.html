@@ -1,0 +1,23 @@
+<!-- Form register -->
+<form>
+  <fieldset>
+    <!-- Título del formulario -->
+    <app-authentication-title [titleForm]="'register'"></app-authentication-title>
+    <!-- /Título del formulario -->
+    <!-- Username -->
+    <app-authentication-input-username></app-authentication-input-username>
+    <!-- /Username -->
+    <!-- Password -->
+    <app-authentication-input-password></app-authentication-input-password>
+    <!-- /Password -->
+    <app-authentication-button [name]="'register'" [routerLink]="'/register'"></app-authentication-button>
+    <hr>
+    <!-- Contenedor botones registro y cambio de contraseña -->
+    <div class="text-center">
+      <app-authentication-link [name]="'Login'" [routerLink]="'/login'"></app-authentication-link>
+      <app-authentication-link [name]="'Forgot password'" [routerLink]="'/forgot'"></app-authentication-link>
+    </div>
+    <!-- /Contenedor botones registro y cambio de contraseña -->
+  </fieldset>
+</form>
+<!-- /Form register -->
